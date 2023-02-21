@@ -20,7 +20,7 @@ function randomItem(){
 function generateNewPWs(){
     PW1 = []
     PW2 = []
-    for (i=0; i<pwLength; i++)
+    for (let i=0; i<pwLength; i++)
     {
             randomItem()
             PW1.push(randomItem())
@@ -66,6 +66,9 @@ function increment(){
 }
 function decrement(){
     pwLength --
+    if(pwLength <= 0){
+        pwLength = 0;
+    }
     let newLength = pwLength
     lengthEl.textContent = newLength + " characters"
 }
